@@ -136,3 +136,32 @@ const add =(a,b) => a+b;
 (function hello(){
     console.log('IIFE');
 })();
+
+// Fun quiz time
+// function calculate(command,a,b)
+// command: add, substract, divide, multiply ,remainder
+
+function calculate(add, a,b){
+   add=a+b
+}
+console.log(`add: ${1, 2}`);
+
+function calculate(substract, a,b){
+   substract=a-b
+}
+console.log(` substract: ${2, 1}`);
+
+function calculate(divide, a,b){
+    divide=a/b
+}
+console.log(`add: ${2, 1}`);
+
+function calculate(multiply, a,b){
+    multiply=a*b
+}
+console.log(`multiply: ${2, 2}`);
+
+function calculate(remainder, a,b){
+   remainder=a%b
+}
+console.log(`remainder: ${2, 2}`);
