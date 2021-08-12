@@ -1,7 +1,7 @@
 //  좀더 엄격한 사용을 위해 작성
 'use-strict';
 
-// 2. Variable-변수(변경될 수 있는 값)
+// 2. Variable-변수(변경될 수 있는 값),rw(read/write)
 // let (added in ES6) ES6-자바스크립트
 
 // 자바스크립트에서 변수를 선언할 수 있는 키워드는 딱하나 
@@ -14,7 +14,7 @@ name='hello';
 console.log(name);
 
 
-// 3. constants (한번 할당하면 값이 절대 바뀌지 않는다)
+// 3. constants (한번 할당하면 값이 절대 바뀌지 않는다)),r(read only)
 // favor immutable data type always for a few reasons;
 // -security
 // -thread safety   
