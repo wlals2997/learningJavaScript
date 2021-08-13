@@ -141,27 +141,17 @@ const add =(a,b) => a+b;
 // function calculate(command,a,b)
 // command: add, substract, divide, multiply ,remainder
 
-function calculate(add, a,b){
-   add=a+b
-}
-console.log(`add: ${1, 2}`);
 
-function calculate(substract, a,b){
-   substract=a-b
+const browser ='IE';
+switch (add, a,b) {
+    case a+b:
+        console.log(`add: ${1, 2}`);
+    break;
+    case 'jimin':
+    case 'ellie':
+         console.log('Hi');
+    break;
+     default:
+        console.log('same all!');
+break;
 }
-console.log(` substract: ${2, 1}`);
-
-function calculate(divide, a,b){
-    divide=a/b
-}
-console.log(`add: ${2, 1}`);
-
-function calculate(multiply, a,b){
-    multiply=a*b
-}
-console.log(`multiply: ${2, 2}`);
-
-function calculate(remainder, a,b){
-   remainder=a%b
-}
-console.log(`remainder: ${2, 2}`);
