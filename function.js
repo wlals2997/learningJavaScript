@@ -141,17 +141,20 @@ const add =(a,b) => a+b;
 // function calculate(command,a,b)
 // command: add, substract, divide, multiply ,remainder
 
-
-const browser ='IE';
-switch (add, a,b) {
-    case a+b:
-        console.log(`add: ${1, 2}`);
-    break;
-    case 'jimin':
-    case 'ellie':
-         console.log('Hi');
-    break;
-     default:
-        console.log('same all!');
-break;
+function calculator(command,a,b){
+    switch(command){
+        case 'add':
+            return a+b;
+        case 'substract':
+            return a-b;
+        case 'divide':
+            return a/b;
+        case 'multiply':
+            return a*b;
+        case 'remainder':
+            return a%b;
+            default:
+                throw Error('unknown command');
+    }
 }
+console.log(calculator('substract',6,5));
