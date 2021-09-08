@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+.special{
+    background: pink;
+}
+</style>
+<!-- <script>
+window.onload=function (){
+    var title=document.getElementById('main-title');
+    console.log(title);  //이렇게만 하면 답은 null
+};//<h1 id="main-title">DOM(dcoument object model</h1> -->
+
+<!-- window.addEventListener('load', function() {
+    var title=document.getElementById('main-title');
+    console.log(title); 
+});//<h1 id="main-title">DOM(dcoument object model</h1>  -->
+
+<!-- window.addEventListener('DOMComtentLoaded', function() {
+    var title=document.getElementById('main-title');
+    console.log(title); 
+});//<h1 id="main-title">DOM(dcoument object model</h1>  -->
+
+   
+</script>
+</head>
+<body>
+    <article>
+        <h1 id="main-title">
+        <span>hello</span>
+            DOM(dcoument object model
+            <small>small</small>
+        </h1>
+    <!-- <h1 id="main-header">header</h1>
+<section>
+    <header>s header</header>
+section1
+</section>
+<section>
+    <header>s header</header>
+    section 2
+</section> -->
+<ul>
+    <li class=numberone>
+        <a class="link-google" href="https://google.com">Google</a>
+    </li>
+    <li></li>
+    <li></li>
+</ul>
+</article>
+<script>
+     var title=document.getElementById('main-title');
+    var titlespan=title.getElementsByTagName('span');
+    console.log(titlespan[0]); //<span>hello</span>
+    // console.log(title); //<h1 id="main-title">DOM(dcoument object model</h1>
+    
+    var maintitle = document.querySelector('#main-title small');
+    console.log(maintitle);//<h1 id="main-title">
+    //     <small>small</small>
+
+    var link=document.querySelector('.numberone a');
+    // console.log(link.getAttribute('href')); 
+    // link.className='special';
+    link.classList.add('special');
+   setTimeout(function(){
+link.classList.remove('link-google')
+    },2000);
+    console.log(link.classList.contains('special')); //true //contain은 boolean값을 가지고 있음
+    //https://google.com //값을 가져오기를 원하는 속성을 작성하면됨
+    // link.setAttribute('href', 'https://naver.com'); //getattribute가 없으면 undefined로 찍힘(return할 값이 없기 떄문에)
+    // console.log(link.getAttribute('href'));  //https://naver.com //setAttribute: 속성값을 바꾸고싶을때 setting한다
+
+</script>
+</body>
+</html>
