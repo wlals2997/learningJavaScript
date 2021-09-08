@@ -10,8 +10,22 @@
     <!-- <script src="function.js"></script> -->
     <!-- <script src="class.js"></script> -->
     <!-- <script src="object.js"></script> -->
-    <script src="array.js"></script>
+    <!-- <script src="array.js"></script> -->
 </head>
 <body>
+    <script>
+        var movies =['극한직업','나 홀로 집에', '어벤져스', '오펀', '강시', '내부자들'];
+        for (var i=0; i<movies.length; i++) {
+           console.log(movies[i]);
+            
+        }
+        let globalMessage= 'global'; // global variable
+function printMessage(){
+    let message='hello';//  local variable지역변수
+    console.log(message);// local variable
+    console.log(globalMessage);
+}
+printMessage();
+    </script>
 </body>
 </html>

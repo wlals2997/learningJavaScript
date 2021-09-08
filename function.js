@@ -47,7 +47,7 @@ function printAll(...args){// ...배열 형태로 전달되게 된다
 }
 printAll('web', 'developer', 'jimin');
 
-// 5.Local scope 밖에서는 안이 보이지 않고 안에서만 밖을 볼 수 있다
+// 5.Local   밖에서는 안이 보이지 않고 안에서만 밖을 볼 수 있다
 let globalMessage= 'global'; // global variable
 function printMessage(){
     let message='hello';//  local variable지역변수
@@ -58,7 +58,7 @@ printMessage();
 
 // 6.Return a value
 function sum(a,b){
-    return a+b; // =return undefined
+    return a+b; // =return undefined  리턴값 어떤 의미하는 값이 살아있는것
 }
 const result= sum(1, 2); // 3
 console.log(`sum: ${1, 2}`);

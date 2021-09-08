@@ -14,7 +14,9 @@ function print(person){
     console.log(person.age);
 }
 
-const jimin ={name : 'jimin', age: 25};
+const jimin ={
+  name : 'jimin',
+  age: 25};
 print(jimin);
 
 // with JavaScript magic (dynamically typed language)
