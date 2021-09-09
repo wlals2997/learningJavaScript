@@ -9,6 +9,25 @@
 .special{
     background: pink;
 }
+.btn{
+    font-size: 2rem;
+}
+.menu{
+    background:green;
+    
+}
+.menu-link{
+    margin: .5em;
+    padding: .5em;
+    text-decoration: none;
+    color:#fff;
+    background: dodgerblue;
+    border: 2px solid dodgerblue;
+    list-style: none;
+}
+.menu-active{
+    background: orange;
+}
 </style>
 <!-- <script>
 window.onload=function (){
@@ -52,6 +71,12 @@ section1
     <li></li>
     <li></li>
 </ul>
+<button class="btn">클릭하세요!</button>
+<nav class="menu">
+    <a href="#" class="menu-link" data-menu="1">menu 1</a>
+    <a href="#" class="menu-link" data-menu="2">menu 2</a>
+    <a href="#" class="menu-link" data-menu="3">menu 3</a>
+</nav>
 </article>
 <script>
      var title=document.getElementById('main-title');
@@ -74,10 +99,69 @@ link.classList.remove('link-google')
     //https://google.com //값을 가져오기를 원하는 속성을 작성하면됨
     // link.setAttribute('href', 'https://naver.com'); //getattribute가 없으면 undefined로 찍힘(return할 값이 없기 떄문에)
     // console.log(link.getAttribute('href'));  //https://naver.com //setAttribute: 속성값을 바꾸고싶을때 setting한다
-var illbuniMom=document.querySelector('.numberone')
-var listelement=document.createElement('li')
+var illbuniMom=document.querySelector('.numberone');
+var listelement=document.createElement('li');
 listelement.innerHTML=('<span>와우</span>'); 
 illbuniMom.appendChild(listelement); //와우 추가
+
+var btn=document.querySelector('.btn');
+var maintitle=document.querySelector('#main-title'); //이벤트를 발생시킬 버튼을 가지고왔고
+
+function btnClickHandler(){
+maintitle.style.background ='dodgerblue';
+} //버튼을 실행시킬 버튼을 만들어놨다
+
+// 1. btn.addEventListener('click',btnClickHandler );  //연결시켜준다
+// btn.onclick=btnClickHandler; //2번째 방법 1번째 방법을 더 많이쓰고 좋음 //on, listener,handler라고 이름을 지워주면 eventListener라고 생각하게됨
+
+// var currentMenu; //현재 활성화된 메뉴를 담을 변수//전역변수
+// var menulink=document.querySelectorAll('.menu-link');
+
+// function clickMenuHandler (){
+//     if(currentMenu){ //currentMenu가 값을 가지고 있을 때만
+    //     currentMenu.classList.remove('menu-active');
+    // }
+    // this.classList.add('menu-active');
+    // currentMenu= this; //갱신 //this는 내가 클릭한 아이를 (기억하기 위해서)가리킴(menulink[i])->다시 전역변수로 감->변수정의됨
+// }
+//    var menuactive= document.querySelector('.menu-active');
+
+ 
+//  제이쿼리스타일 for(var i= 0; i<menulink.length; i++){
+//     menulink[i].classList.remove('menu-active');
+// } 
+    
+//  2번쨰방법  if(menuactive){
+//     menuactive.classList.remove('menu-active');
+//    }
+// for (var i = 0; i < menulink.length; i++) {
+//    menulink[i].addEventListener('click',clickMenuHandler);
+// }
+//이벤트 위임
+//더 간단한 코드
+var menu=document.querySelector('.menu');
+var currentMenu;
+
+function activate(elem){
+   elem.classList.add('menu-active');
+  currentMenu=elem;
+}
+function inactivate(){
+    currentMenu.classList.remove('menu-active');
+}
+
+function clickHandler(e){ //e:발생한 이벤트에 대한 많은 정보를 담고 있는 아이 (어느 위치에 클릭했는지, 누구를 클릭했는지)
+  if(currentMenu){
+      inactivate();
+    //   currentMenu.classList.remove('menu-active');
+  }
+  activate(e.target);
+//   e.target.classList.add('menu-active');
+//   currentMenu=e.target;
+// console.log(this);  //this는 menu.addEventListener가 호출한 객채
+}
+menu.addEventListener('click',clickHandler);
+activate(document.querySelectorAll('.menu-link')[0]); //따로 기능호출 가능
 </script>
 </body>
 </html>
