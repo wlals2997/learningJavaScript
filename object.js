@@ -126,3 +126,8 @@ console.log(mixed.size);  // big
     console.log(Lee.name);
     Lee.name="Lee jimin";
     console.log(Lee.name);
+
+    var movies=["오펀","기생충","어벤져스","내부자들","감시자들","강시"];
+for(movies=0; movies<movies.length; movies++){
+console.log(movies[i]);
+}
