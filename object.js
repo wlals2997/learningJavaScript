@@ -102,3 +102,10 @@ const mixed = Object.assign({}, fruit1, fruit2);
 console.log(mixed.color);  // blue
 console.log(mixed.size);  // big
 
+const  Lee ={
+  name: "jimin",
+  age: "3",
+  gender:"Female",
+ 
+  };
+  console.log(Lee);
