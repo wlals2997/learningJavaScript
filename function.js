@@ -158,3 +158,28 @@ function calculator(command,a,b){
     }
 }
 console.log(calculator('substract',6,5));
+function sample(){
+    console.log("ㅋㅋㅋ");
+    }
+    sample();//
+
+    function sayBye(name, age){
+        console.log("Hi, i'm",name,"and",age);
+        }
+        sayBye("jimin", 3);
+
+        function sayBye(name, age){
+
+            console.log(`Hi, i'm ${name} and ${age}`);
+            
+            }
+            
+            sayBye("jimin", 3);
+
+var a = -100;
+function sample(){
+if(a>0){
+return;
+}
+console.log("ㅋㅋㅋ");}
+sample();
