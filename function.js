@@ -184,9 +184,9 @@ return;
 console.log("ㅋㅋㅋ");}
 sample();
 
-var btn=document.querySelector('#submit');
-function handleClick(){
-    btn.style.color="blue";
-}
-btn.addEventListener("click", handleClick);
+// var btn=document.querySelector('#submit');
+// function handleClick(){
+//     btn.style.color="blue";
+// }
+// btn.addEventListener("click", handleClick);
   
